@@ -1,0 +1,14 @@
+---
+// SkillCard.astro - Reusable skill card component
+interface Props {
+  title: string;
+  skills: string;
+}
+
+const { title, skills } = Astro.props;
+---
+
+<div class="p-4 bg-[var(--color-background)] rounded-lg shadow-sm border border-[var(--color-border)]">
+  <h3 class="font-bold text-[var(--color-primary)]">{title}</h3>
+  <p class="text-[var(--color-text-muted)]">{skills}</p>
+</div>
