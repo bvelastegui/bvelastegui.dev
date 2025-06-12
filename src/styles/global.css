@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+    --font-family-base: 'JetBrains Mono', monospace;
+
     --color-primary: #1e40af;
     --color-primary-light: #3b82f6;
     --color-primary-dark: #1e3a8a;
@@ -40,5 +42,10 @@
     body {
         background-color: var(--color-background);
         color: var(--color-text);
+        font-family: var(--font-family-base);
+    }
+
+    html {
+        font-family: var(--font-family-base);
     }
 }
