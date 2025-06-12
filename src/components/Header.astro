@@ -1,27 +1,29 @@
 ---
-
+// Get the current URL path
+const currentPath = Astro.url.pathname;
+const isHomePage = currentPath === "";
 ---
 
 <header
   class="sticky top-0 z-10 border-b border-[var(--color-border)] bg-[var(--color-background)]"
 >
   <div class="container mx-auto flex items-center justify-between px-4 py-3">
-    <a href="/" class="text-xl font-bold text-[var(--color-primary)]"
-      >Bryan Velastegui</a
-    >
+    <a href="/" class="text-xl font-bold text-[var(--color-text)] inline-flex items-baseline">
+      Bryan<span class="text-[var(--color-primary)] text-3xl leading-none">.</span>
+    </a>
     <nav class="flex items-center gap-6">
       <a
-        href="#about"
+        href={isHomePage ? "#about" : "/#about"}
         class="text-[var(--color-text)] hover:text-[var(--color-primary)]"
         >About</a
       >
       <a
-        href="#projects"
-        class="text-[var(--color-text)] hover:text-[var(--color-primary)]"
+        href={isHomePage ? "#projects" : "/projects"}
+        class={`text-[var(--color-text)] hover:text-[var(--color-primary)] ${currentPath.startsWith("/projects") ? "text-[var(--color-primary)]" : ""}`}
         >Projects</a
       >
       <a
-        href="#contact"
+        href={isHomePage ? "#contact" : "/#contact"}
         class="text-[var(--color-text)] hover:text-[var(--color-primary)]"
         >Contact</a
       >
@@ -70,9 +72,11 @@
   function setTheme(isDark) {
     if (isDark) {
       document.documentElement.classList.add("dark");
+      document.documentElement.dataset.theme = ("dark");
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      delete document.documentElement.dataset.theme;
       localStorage.setItem("theme", "light");
     }
   }
