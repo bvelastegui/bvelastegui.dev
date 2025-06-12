@@ -2,24 +2,27 @@
 // Hero.astro - Hero section component
 ---
 
-<section id="hero" class="py-16 md:py-24 flex flex-col items-center text-center">
-  <div class="max-w-3xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[var(--color-primary)]">
+<section
+  id="hero"
+  class="flex flex-col items-center py-16 text-center md:py-24"
+>
+  <div class="mx-auto max-w-3xl">
+    <h1 class="mb-6 text-4xl font-bold text-[var(--color-primary)] md:text-5xl">
       Bryan Velastegui
     </h1>
-    <p class="text-xl md:text-2xl mb-8 text-[var(--color-text-muted)]">
+    <p class="mb-8 text-xl text-[var(--color-text-muted)] md:text-2xl">
       Full Stack Developer & Software Engineer
     </p>
     <div class="flex flex-wrap justify-center gap-4">
-      <a 
-        href="#contact" 
-        class="px-6 py-3 bg-[var(--color-primary)] text-white rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors"
+      <a
+        href="#contact"
+        class="rounded-lg bg-[var(--color-primary)] px-6 py-3 text-white transition-colors hover:bg-[var(--color-primary-dark)]"
       >
         Contact Me
       </a>
-      <a 
-        href="#projects" 
-        class="px-6 py-3 bg-[var(--color-background-alt)] text-[var(--color-text)] border border-[var(--color-border)] rounded-lg hover:bg-[var(--color-border)] transition-colors"
+      <a
+        href="#projects"
+        class="rounded-lg border border-[var(--color-border)] bg-[var(--color-background-alt)] px-6 py-3 text-[var(--color-text)] transition-colors hover:bg-[var(--color-border)]"
       >
         View Projects
       </a>

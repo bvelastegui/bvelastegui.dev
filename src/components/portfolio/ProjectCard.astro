@@ -5,23 +5,39 @@ interface Props {
   technologies: string[];
 }
 
-const { projectNumber, technologies = ["React", "Node.js", "MongoDB"] } = Astro.props;
+const { projectNumber, technologies = ["React", "Node.js", "MongoDB"] } =
+  Astro.props;
 ---
 
-<div class="bg-[var(--color-background-alt)] rounded-lg overflow-hidden border border-[var(--color-border)] shadow-sm hover:shadow-md transition-shadow">
-  <div class="h-48 bg-[var(--color-primary-light)] flex items-center justify-center">
-    <span class="text-white text-xl">Project Image</span>
+<div
+  class="overflow-hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-background-alt)] shadow-sm transition-shadow hover:shadow-md"
+>
+  <div
+    class="flex h-48 items-center justify-center bg-[var(--color-primary-light)]"
+  >
+    <span class="text-xl text-white">Project Image</span>
   </div>
   <div class="p-6">
-    <h3 class="text-xl font-bold mb-2 text-[var(--color-primary)]">Project {projectNumber}</h3>
-    <p class="text-[var(--color-text-muted)] mb-4">
-      A brief description of this amazing project and the technologies used to build it.
+    <h3 class="mb-2 text-xl font-bold text-[var(--color-primary)]">
+      Project {projectNumber}
+    </h3>
+    <p class="mb-4 text-[var(--color-text-muted)]">
+      A brief description of this amazing project and the technologies used to
+      build it.
     </p>
-    <div class="flex gap-2 mb-4">
-      {technologies.map((tech) => (
-        <span class="px-2 py-1 text-xs rounded-full bg-[var(--color-secondary-light)] text-[var(--color-primary-dark)]">{tech}</span>
-      ))}
+    <div class="mb-4 flex gap-2">
+      {
+        technologies.map((tech) => (
+          <span class="rounded-full bg-[var(--color-secondary-light)] px-2 py-1 text-xs text-[var(--color-primary-dark)]">
+            {tech}
+          </span>
+        ))
+      }
     </div>
-    <a href="#" class="text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] font-medium">View Project →</a>
+    <a
+      href="#"
+      class="font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"
+      >View Project →</a
+    >
   </div>
 </div>

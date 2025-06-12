@@ -1,44 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1e40af;
-  --color-primary-light: #3b82f6;
-  --color-primary-dark: #1e3a8a;
-  --color-secondary: #60a5fa;
-  --color-secondary-light: #93c5fd;
-  --color-secondary-dark: #2563eb;
-  --color-accent: #3b82f6;
-  --color-accent-light: #60a5fa;
-  --color-accent-dark: #1d4ed8;
+    --color-primary: #1e40af;
+    --color-primary-light: #3b82f6;
+    --color-primary-dark: #1e3a8a;
+    --color-secondary: #60a5fa;
+    --color-secondary-light: #93c5fd;
+    --color-secondary-dark: #2563eb;
+    --color-accent: #3b82f6;
+    --color-accent-light: #60a5fa;
+    --color-accent-dark: #1d4ed8;
 
-  --color-background: #ffffff;
-  --color-background-alt: #f3f4f6;
-  --color-text: #111827;
-  --color-text-muted: #4b5563;
-  --color-border: #e5e7eb;
+    --color-background: #ffffff;
+    --color-background-alt: #f3f4f6;
+    --color-text: #111827;
+    --color-text-muted: #4b5563;
+    --color-border: #e5e7eb;
 }
 
 .dark {
-  --color-primary: #3b82f6;
-  --color-primary-light: #60a5fa;
-  --color-primary-dark: #2563eb;
-  --color-secondary: #93c5fd;
-  --color-secondary-light: #bfdbfe;
-  --color-secondary-dark: #60a5fa;
-  --color-accent: #60a5fa;
-  --color-accent-light: #93c5fd;
-  --color-accent-dark: #3b82f6;
+    --color-primary: #3b82f6;
+    --color-primary-light: #60a5fa;
+    --color-primary-dark: #2563eb;
+    --color-secondary: #93c5fd;
+    --color-secondary-light: #bfdbfe;
+    --color-secondary-dark: #60a5fa;
+    --color-accent: #60a5fa;
+    --color-accent-light: #93c5fd;
+    --color-accent-dark: #3b82f6;
 
-  --color-background: #0f172a;
-  --color-background-alt: #1e293b;
-  --color-text: #f3f4f6;
-  --color-text-muted: #9ca3af;
-  --color-border: #334155;
+    --color-background: #0f172a;
+    --color-background-alt: #1e293b;
+    --color-text: #f3f4f6;
+    --color-text-muted: #9ca3af;
+    --color-border: #334155;
 }
 
 @layer base {
-  body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-  }
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+    }
 }

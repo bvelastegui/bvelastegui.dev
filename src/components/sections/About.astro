@@ -3,19 +3,22 @@
 import SkillCard from "../portfolio/SkillCard.astro";
 ---
 
-<section id="about" class="py-16 bg-[var(--color-background-alt)]">
+<section id="about" class="bg-[var(--color-background-alt)] py-16">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-8 text-center text-[var(--color-primary)]">About Me</h2>
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg mb-6 text-[var(--color-text)]">
-        Hello! I'm Bryan, a passionate Full Stack Developer with expertise in modern web technologies. 
-        I enjoy building responsive, user-friendly applications that solve real-world problems.
+    <h2 class="mb-8 text-center text-3xl font-bold text-[var(--color-primary)]">
+      About Me
+    </h2>
+    <div class="mx-auto max-w-3xl">
+      <p class="mb-6 text-lg text-[var(--color-text)]">
+        Hello! I'm Bryan, a passionate Full Stack Developer with expertise in
+        modern web technologies. I enjoy building responsive, user-friendly
+        applications that solve real-world problems.
       </p>
-      <p class="text-lg mb-6 text-[var(--color-text)]">
-        With a strong foundation in both frontend and backend development, I create seamless experiences 
-        that are both beautiful and functional.
+      <p class="mb-6 text-lg text-[var(--color-text)]">
+        With a strong foundation in both frontend and backend development, I
+        create seamless experiences that are both beautiful and functional.
       </p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
         <SkillCard title="Frontend" skills="React, Vue, Astro" />
         <SkillCard title="Backend" skills="Node.js, Express, Django" />
         <SkillCard title="Database" skills="MongoDB, PostgreSQL" />
