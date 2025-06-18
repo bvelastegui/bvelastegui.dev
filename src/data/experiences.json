@@ -1,0 +1,34 @@
+[
+  {
+    "id": 4,
+    "startDate": "Apr 2022",
+    "endDate": "Actual",
+    "company": "Polimundo",
+    "position": "Full Stack Developer",
+    "description": "Desarrollo y soporte de sistemas web."
+  },
+  {
+    "id": 3,
+    "startDate": "Ago 2021",
+    "endDate": "Apr 2022",
+    "company": "Intisana",
+    "position": "Jefe de sistemas",
+    "description": "Seguridad perimetral con Fortigate.\nAdministración de redes inalámbricas.\nAdministración G-Suite.\nAdministración ESET PROTECT.\nAdministración WHM CPANEL."
+  },
+  {
+    "id": 2,
+    "startDate": "Nov 2015",
+    "endDate": "Apr 2022",
+    "company": "Intisana",
+    "position": "Desarrollador Web",
+    "description": "Desarrollo de aplicaciones web con PHP, MySQL y JavaScript.\nMantenimiento y actualización del sistema de gestión académica."
+  },
+  {
+    "id": 1,
+    "startDate": "Nov 2012",
+    "endDate": "May 2015",
+    "company": "Intisana",
+    "position": "Asistente de sistemas",
+    "description": "Mantenimiento preventivo y correctivo.\nMantenimiento y soporte del Sistema de Educación Online.\nAsistencia técnica al personal de la institución."
+  }
+]

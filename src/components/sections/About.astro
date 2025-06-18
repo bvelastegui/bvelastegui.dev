@@ -1,27 +1,33 @@
 ---
-// About.astro - About section component
+import SectionHeader from "../SectionHeader.astro";
 ---
 
 <section id="about" class="py-20 px-4 md:px-12">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Ilustración SVG Placeholder -->
-    <div class="flex-shrink-0 flex items-center justify-center w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-blue)] rounded-2xl shadow-lg mb-8 md:mb-0">
-      <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="10" width="80" height="80" rx="16" fill="#181C23" stroke="#3FFFD8" stroke-width="4"/>
-        <text x="50" y="60" text-anchor="middle" fill="#3FFFD8" font-size="32" font-family="monospace" font-weight="bold" >/</text>
-      </svg>
+  <SectionHeader title="About" />
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-30 relative">
+    <div class="absolute flex items-start md:items-center justify-center md:justify-start inset-0 z-0 font-mono">
+      <span class="md:ml-32 text-[230px] md:text-[350px] text-alt/60">{"</>"}</span>
     </div>
-    <!-- Contenido principal -->
-    <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-left text-[var(--color-text)]">
-        About<span class="text-[var(--color-accent)]">.</span>
-      </h2>
-      <p class="mb-4 text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl">
-        <span class="font-semibold text-[var(--color-text)]">Web Developer</span> en transición hacia una carrera en tecnología.<br/>
-        Actualmente, mi enfoque está en aprender y dominar habilidades esenciales de desarrollo web. Tengo una base sólida en <span class="font-semibold text-[var(--color-accent)]">HTML, CSS, Git y JavaScript</span>.
+    <div
+      class="z-10 hidden md:flex flex-shrink-0 items-center justify-center w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-accent to-accent-blue mb-8 md:mb-0">
+    </div>
+    <div class="z-10 flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
+      <p class="mb-4 text-lg">
+        <span class="font-black text-white">FullStack Developer</span> con mas de nueve años de experiencia en el
+        desarrollo y soporte de sistemas web.
       </p>
-      <p class="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl">
-        Me apasiona crear soluciones digitales modernas y atractivas, siempre buscando mejorar y aprender nuevas tecnologías.
+      <p class="mb-4 text-lg">
+        Me apasiona crear soluciones innovadoras y eficientes con tecnologías como
+        <span class="font-black">Astro, Vue, Laravel, y otros frameworks PHP</span>.
+        Actualmente trabajo en Polimundo, una empresa dedicada al turismo.
+      </p>
+      <p class="text-lg mb-4">
+        En mi rol actual, participo en el diseño, desarrollo, implementación y mantenimiento de diversas aplicaciones
+        web, utilizando herramientas como <strong>Vue, Vitest, Sass, Laravel, Docker, Git, Bitbucket y Github</strong>.
+      </p>
+      <p class="text-lg">
+        Me gusta trabajar en equipo, siempre dispuesto a ayudar y aprender. Mi objetivo es seguir creciendo como
+        profesional y aportar valor a mi organización y a la sociedad.
       </p>
     </div>
   </div>

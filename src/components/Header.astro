@@ -1,7 +1,6 @@
 ---
 // Get the current URL path
 const currentPath = Astro.url.pathname;
-const isHomePage = currentPath === "";
 ---
 
 <header class="sticky top-0 z-40 backdrop-blur-lg">
@@ -11,20 +10,26 @@ const isHomePage = currentPath === "";
     </a>
     <nav class="flex items-center gap-8 text-base font-medium">
       <a
-        href={isHomePage ? "#about" : "/#about"}
+        href="/#about"
         class={`relative transition-colors duration-200 text-white hover:text-accent px-1
           ${currentPath === "/" || currentPath === "" ? "after:content-[''] after:block after:h-0.5 after:bg-accent after:w-full after:rounded after:mt-1" : ""}`}
-      >About</a>
+      >
+        About
+      </a>
       <a
-        href={isHomePage ? "#projects" : "/projects"}
+        href="/#experience"
         class={`relative transition-colors duration-200 text-white hover:text-accent px-1
-          ${currentPath.startsWith("/projects") ? "after:content-[''] after:block after:h-0.5 after:bg-accent after:w-full after:rounded after:mt-1" : ""}`}
-      >Projects</a>
+          ${currentPath.startsWith("/#experience") ? "after:content-[''] after:block after:h-0.5 after:bg-accent after:w-full after:rounded after:mt-1" : ""}`}
+      >
+        Experience
+      </a>
       <a
-        href={isHomePage ? "#contact" : "/#contact"}
+        href="/#contact"
         class={`relative transition-colors duration-200 text-white hover:text-accent px-1
           ${currentPath === "/#contact" ? "after:content-[''] after:block after:h-0.5 after:bg-accent after:w-full after:rounded after:mt-1" : ""}`}
-      >Contact</a>
+      >
+        Contact
+      </a>
     </nav>
   </div>
 </header>
