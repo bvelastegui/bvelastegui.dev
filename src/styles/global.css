@@ -1,47 +1,30 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+:root {
+    --color-primary: oklch(0.899 0.157 175.148);
+    --color-secondary: oklch(0.225 0.015 261.631);
+    --color-accent: oklch(0.899 0.157 175.148);
+    --color-accent-blue: oklch(0.864 0.11 206.956);
+    --color-accent-orange: oklch(0.814 0.122 66.921);
+    --color-background: oklch(0.225 0.015 261.631);
+    --color-background-alt: oklch(0.277 0.023 267.182);
+    --color-text: #fff;
+    --color-text-secondary: oklch(0.737 0.02 262.983);
+    --color-text-muted: oklch(0.737 0.02 262.983);
+    --color-border: oklch(0.277 0.023 267.182);
+    --color-bg: oklch(0.225 0.015 261.631);
+}
+
 @theme {
-    /* Arch Linux colors - Light Theme */
-    --color-primary: #1793D1;
-    --color-primary-light: #55B3E3;
-    --color-primary-dark: #0D6A9A;
-    --color-secondary: #333333;
-    --color-secondary-light: #555555;
-    --color-secondary-dark: #222222;
-    --color-accent: #1793D1;
-    --color-accent-light: #55B3E3;
-    --color-accent-dark: #0D6A9A;
-
-    --color-background: #ffffff;
-    --color-background-alt: #f3f4f6;
-    --color-text: #333333;
-    --color-text-muted: #666666;
-    --color-border: #e5e7eb;
-}
-
-.dark {
-    /* Arch Linux colors - Dark Theme */
-    --color-primary: #1793D1;
-    --color-primary-light: #55B3E3;
-    --color-primary-dark: #0D6A9A;
-    --color-secondary: #CCCCCC;
-    --color-secondary-light: #EEEEEE;
-    --color-secondary-dark: #AAAAAA;
-    --color-accent: #55B3E3;
-    --color-accent-light: #7FC8EB;
-    --color-accent-dark: #1793D1;
-
-    --color-background: #121822;
-    --color-background-alt: #1E2736;
-    --color-text: #F8F9FA;
-    --color-text-muted: #ADB5BD;
-    --color-border: #2A3441;
-}
-
-@layer base {
-    body {
-        background-color: var(--color-background);
-        color: var(--color-text);
-    }
+    --font-mono: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+    --font-sans: 'Poppins', sans-serif;
+    --color-primary: oklch(0.899 0.157 175.148);
+    --color-secondary: oklch(0.225 0.015 261.631);
+    --color-muted: oklch(0.737 0.02 262.983);
+    --color-background: oklch(0.225 0.015 261.631);
+    --color-background-alt: oklch(0.277 0.023 267.182);
+    --color-accent: oklch(0.899 0.157 175.148);
+    --color-accent-blue: oklch(0.864 0.11 206.956);
+    --color-accent-orange: oklch(0.814 0.122 66.921);
 }

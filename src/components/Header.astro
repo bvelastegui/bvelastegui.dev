@@ -5,93 +5,28 @@ const isHomePage = currentPath === "";
 ---
 
 <header
-  class="sticky top-0 z-10 border-b border-[var(--color-border)] bg-[var(--color-background)]"
+  class="sticky top-0 z-40 border-b border-background-alt bg-background backdrop-blur-md"
 >
-  <div class="container mx-auto flex items-center justify-between px-4 py-3">
-    <a href="/" class="text-xl font-bold text-[var(--color-text)] inline-flex items-baseline">
-      Bryan<span class="text-[var(--color-primary)] text-3xl leading-none">.</span>
+  <div class="container mx-auto flex items-center justify-between px-6 py-4">
+    <a href="/" class="text-2xl font-bold flex items-baseline gap-1 select-none">
+      <span class="text-white">Bryan</span><span class="text-accent text-3xl leading-none">.</span>
     </a>
-    <nav class="flex items-center gap-6">
+    <nav class="flex items-center gap-8 text-base font-medium">
       <a
         href={isHomePage ? "#about" : "/#about"}
-        class="text-[var(--color-text)] hover:text-[var(--color-primary)]"
-        >About</a
-      >
+        class={`relative transition-colors duration-200 text-white hover:text-accent px-1
+          ${currentPath === "/" || currentPath === "" ? "after:content-[''] after:block after:h-0.5 after:bg-accent after:w-full after:rounded after:mt-1" : ""}`}
+      >About</a>
       <a
         href={isHomePage ? "#projects" : "/projects"}
-        class={`text-[var(--color-text)] hover:text-[var(--color-primary)] ${currentPath.startsWith("/projects") ? "text-[var(--color-primary)]" : ""}`}
-        >Projects</a
-      >
+        class={`relative transition-colors duration-200 text-white hover:text-accent px-1
+          ${currentPath.startsWith("/projects") ? "after:content-[''] after:block after:h-0.5 after:bg-accent after:w-full after:rounded after:mt-1" : ""}`}
+      >Projects</a>
       <a
         href={isHomePage ? "#contact" : "/#contact"}
-        class="text-[var(--color-text)] hover:text-[var(--color-primary)]"
-        >Contact</a
-      >
-      <button
-        id="theme-toggle"
-        class="rounded-full bg-[var(--color-background-alt)] p-2"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 dark:hidden"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-          ></path>
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="hidden h-5 w-5 dark:block"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-          ></path>
-        </svg>
-      </button>
+        class={`relative transition-colors duration-200 text-white hover:text-accent px-1
+          ${currentPath === "/#contact" ? "after:content-[''] after:block after:h-0.5 after:bg-accent after:w-full after:rounded after:mt-1" : ""}`}
+      >Contact</a>
     </nav>
   </div>
 </header>
-
-<script is:inline>
-  // Check for saved theme preference or use system preference
-  const themeToggleBtn = document.getElementById("theme-toggle");
-
-  // Function to set the theme
-  function setTheme(isDark) {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      document.documentElement.dataset.theme = ("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      delete document.documentElement.dataset.theme;
-      localStorage.setItem("theme", "light");
-    }
-  }
-
-  // Initialize theme
-  const savedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-    setTheme(true);
-  }
-
-  // Toggle theme on button click
-  themeToggleBtn?.addEventListener("click", () => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setTheme(!isDark);
-  });
-</script>
