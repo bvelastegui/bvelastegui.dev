@@ -3,28 +3,22 @@
 
 :root {
     --color-primary: oklch(0.899 0.157 175.148);
-    --color-secondary: oklch(0.225 0.015 261.631);
+    --color-secondary: oklch(0.187 0.014 243.724);
+    --color-muted: oklch(0.669 0.053 250.453);
+    --color-alt: oklch(0.277 0.023 267.182);
     --color-accent: oklch(0.899 0.157 175.148);
     --color-accent-blue: oklch(0.864 0.11 206.956);
     --color-accent-orange: oklch(0.814 0.122 66.921);
-    --color-background: oklch(0.225 0.015 261.631);
-    --color-background-alt: oklch(0.277 0.023 267.182);
-    --color-text: #fff;
-    --color-text-secondary: oklch(0.737 0.02 262.983);
-    --color-text-muted: oklch(0.737 0.02 262.983);
-    --color-border: oklch(0.277 0.023 267.182);
-    --color-bg: oklch(0.225 0.015 261.631);
 }
 
 @theme {
     --font-mono: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
     --font-sans: 'Ubuntu Sans', sans-serif;
-    --color-primary: oklch(0.899 0.157 175.148);
-    --color-secondary: oklch(0.225 0.015 261.631);
-    --color-muted: oklch(0.737 0.02 262.983);
-    --color-background: oklch(0.225 0.015 261.631);
-    --color-background-alt: oklch(0.277 0.023 267.182);
-    --color-accent: oklch(0.899 0.157 175.148);
-    --color-accent-blue: oklch(0.864 0.11 206.956);
-    --color-accent-orange: oklch(0.814 0.122 66.921);
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-muted: var(--color-muted);
+    --color-alt: var(--color-alt);
+    --color-accent: var(--color-accent);
+    --color-accent-blue: var(--color-accent-blue);
+    --color-accent-orange: var(--color-accent-orange);
 }

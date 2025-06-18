@@ -1,23 +1,31 @@
 ---
-// Hero.astro - Hero section component
+import { Image } from 'astro:assets'
+import phpImage from '../../assets/php.svg'
+import nodeImage from '../../assets/nodejs.svg'
+import psqlImage from '../../assets/postgresql.svg'
+import gitImage from '../../assets/git.svg'
+import archImage from '../../assets/archlinux.svg'
+import ownerImage from '../../assets/me.jpg'
 ---
 
 <section
   id="hero"
-  class="container mx-auto flex flex-col md:flex-row items-center justify-center py-16 md:py-24 px-4 md:px-12"
+  class="container mx-auto flex flex-col md:flex-row items-center justify-center py-16 md:pt-24 md:pb-36 px-4 md:px-12"
 >
   <div
     class="relative flex-shrink-0 flex items-center justify-center w-40 h-56 md:w-56 md:h-72 border-2 border-accent-blue mb-8 md:mb-0">
-    <div class="absolute -right-2 -bottom-6 p-2 bg-background size-16"></div>
-    <div class="text-6xl bg-gradient-to-r text-shadow-accent-blue from-accent via-accent-blue to-accent bg-clip-text text-transparent font-black font-mono absolute z-20 -right-8 -bottom-7 tracking-tighter">
+    <div class="absolute -right-2 -bottom-6 p-2 bg-secondary size-16"></div>
+    <div
+      class="text-6xl bg-gradient-to-r text-shadow-accent-blue from-accent via-accent-blue to-accent bg-clip-text text-transparent font-black font-mono absolute z-20 -right-8 -bottom-7 tracking-tighter">
       {"</>"}
     </div>
 
-    <img
-      src="/images/me.jpg"
+    <Image
+      src={ownerImage}
       class="max-h-full z-10"
       alt="Bryan Velastegui"
-    >
+      loading="eager"
+    />
   </div>
   <!-- Contenido principal -->
   <div class="flex flex-col items-center md:items-start text-center md:text-left md:ml-30">
@@ -25,18 +33,12 @@
       Hi, I'm Bryan<span class="text-accent">.</span><br />
       <span class="bg-gradient-to-r  from-muted to-muted/30 bg-clip-text text-transparent">Full Stack Dev</span>
     </h1>
-    <div class="flex gap-3 mb-6">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
-           class="h-7 w-7" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="VueJS"
-           class="h-7 w-7" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-           alt="TailwindCSS" class="h-7 w-7" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="Typescript"
-           class="h-7 w-7" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
-           class="h-7 w-7" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Docker" class="h-7 w-7" />
+    <div class="flex gap-4 mb-6">
+      <Image loading="eager" src={phpImage} alt="PHP" class="size-7" />
+      <Image loading="eager" src={nodeImage} alt="NodeJS" class="size-7" />
+      <Image loading="eager" src={psqlImage} alt="PostgreSQL" class="size-7" />
+      <Image loading="eager" src={gitImage} alt="Git" class="size-7" />
+      <Image loading="eager" src={archImage} alt="Arch Linux" class="size-7" />
     </div>
   </div>
 </section>
