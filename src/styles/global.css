@@ -17,8 +17,8 @@
 }
 
 @theme {
-    --font-mono: 'Roboto Mono', 'Courier New', 'Courier', monospace;
-    --font-sans: 'Poppins', sans-serif;
+    --font-mono: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+    --font-sans: 'Ubuntu Sans', sans-serif;
     --color-primary: oklch(0.899 0.157 175.148);
     --color-secondary: oklch(0.225 0.015 261.631);
     --color-muted: oklch(0.737 0.02 262.983);
