@@ -4,28 +4,39 @@
 
 <section
   id="hero"
-  class="flex flex-col items-center py-16 text-center md:py-24"
+  class="container mx-auto flex flex-col md:flex-row items-center justify-center py-16 md:py-24 px-4 md:px-12"
 >
-  <div class="mx-auto max-w-3xl">
-    <h1 class="mb-6 text-4xl font-bold text-[var(--color-primary)] md:text-5xl">
-      Bryan Velastegui
+  <div
+    class="relative flex-shrink-0 flex items-center justify-center w-40 h-56 md:w-56 md:h-72 border-2 border-accent-blue mb-8 md:mb-0">
+    <div class="absolute -right-2 -bottom-6 p-2 bg-background size-16"></div>
+    <div class="text-6xl bg-gradient-to-r text-shadow-accent-blue from-accent via-accent-blue to-accent bg-clip-text text-transparent font-black font-mono absolute z-20 -right-8 -bottom-6 tracking-[-8px]">
+      {"</>"}
+    </div>
+
+    <img
+      src="/images/me.jpg"
+      class="max-h-full z-10"
+      alt="Bryan Velastegui"
+    >
+  </div>
+  <!-- Contenido principal -->
+  <div class="flex flex-col items-center md:items-start text-center md:text-left md:ml-30">
+    <h1 class="mb-4 text-5xl md:text-6xl font-bold text-white leading-16 tracking-normal">
+      Hi, I'm <span class="text-accent">Bryan</span>.<br />
+      <span class="bg-gradient-to-r  from-muted to-muted/30 bg-clip-text text-transparent">Full Stack Dev</span>
     </h1>
-    <p class="mb-8 text-xl text-[var(--color-text-muted)] md:text-2xl">
-      Full Stack Developer & Software Engineer
-    </p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a
-        href="#contact"
-        class="rounded-lg bg-[var(--color-primary)] px-6 py-3 text-white transition-colors hover:bg-[var(--color-primary-dark)]"
-      >
-        Contact Me
-      </a>
-      <a
-        href="#projects"
-        class="rounded-lg border border-[var(--color-border)] bg-[var(--color-background-alt)] px-6 py-3 text-[var(--color-text)] transition-colors hover:bg-[var(--color-border)]"
-      >
-        View Projects
-      </a>
+    <div class="flex gap-3 mb-6">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
+           class="h-7 w-7" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="VueJS"
+           class="h-7 w-7" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+           alt="TailwindCSS" class="h-7 w-7" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="Typescript"
+           class="h-7 w-7" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
+           class="h-7 w-7" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Docker" class="h-7 w-7" />
     </div>
   </div>
 </section>

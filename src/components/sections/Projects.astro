@@ -1,7 +1,6 @@
 ---
-// Projects.astro - Projects section component
+// Projects.astro - Projects/Experience section component
 import { getCollection } from "astro:content";
-import ProjectCard from "../portfolio/ProjectCard.astro";
 
 // Get all projects from the collection
 const projects = await getCollection("projects");
@@ -12,29 +11,30 @@ const sortedProjects = projects.sort((a, b) =>
 );
 ---
 
-<section id="projects" class="py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-8 text-center text-[var(--color-primary)]">Projects</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section id="projects" class="py-20 px-4 md:px-12">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-left text-[var(--color-text)]">
+      Experience<span class="text-[var(--color-accent)]">.</span>
+    </h2>
+    <div class="flex flex-col divide-y divide-[var(--color-border)]">
       {sortedProjects.slice(0, 3).map((project) => (
-        <ProjectCard 
-          project={project}
-          slug={project.slug}
-          title={project.data.title}
-          description={project.data.description}
-          image={project.data.image}
-          technologies={project.data.technologies}
-        />
+        <div class="flex flex-col md:flex-row md:items-start gap-4 py-8 first:pt-0 last:pb-0">
+          <div class="md:w-48 flex-shrink-0 mb-2 md:mb-0">
+            <span class="block text-sm font-semibold text-[var(--color-accent)]">
+              {new Date(project.data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+            </span>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-[var(--color-text)] mb-1">{project.data.title}</h3>
+            <p class="text-[var(--color-text-secondary)] mb-2">{project.data.description}</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              {project.data.technologies?.map((tech) => (
+                <span class="px-2 py-0.5 rounded bg-[var(--color-background-alt)] text-xs text-[var(--color-text-secondary)] border border-[var(--color-border)]">{tech}</span>
+              ))}
+            </div>
+          </div>
+        </div>
       ))}
-    </div>
-
-    <div class="mt-12 text-center">
-      <a 
-        href="/projects" 
-        class="inline-flex items-center rounded-md bg-[var(--color-primary)] px-4 py-2 text-white hover:bg-[var(--color-primary-dark)]"
-      >
-        View All Projects
-      </a>
     </div>
   </div>
 </section>

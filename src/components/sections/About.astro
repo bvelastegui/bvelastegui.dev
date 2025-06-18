@@ -1,29 +1,28 @@
 ---
 // About.astro - About section component
-import SkillCard from "../portfolio/SkillCard.astro";
 ---
 
-<section id="about" class="bg-[var(--color-background-alt)] py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="mb-8 text-center text-3xl font-bold text-[var(--color-primary)]">
-      About Me
-    </h2>
-    <div class="mx-auto max-w-3xl">
-      <p class="mb-6 text-lg text-[var(--color-text)]">
-        Hello! I'm Bryan, a passionate Full Stack Developer with expertise in
-        modern web technologies. I enjoy building responsive, user-friendly
-        applications that solve real-world problems.
+<section id="about" class="py-20 px-4 md:px-12">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <!-- Ilustración SVG Placeholder -->
+    <div class="flex-shrink-0 flex items-center justify-center w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-blue)] rounded-2xl shadow-lg mb-8 md:mb-0">
+      <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="80" height="80" rx="16" fill="#181C23" stroke="#3FFFD8" stroke-width="4"/>
+        <text x="50" y="60" text-anchor="middle" fill="#3FFFD8" font-size="32" font-family="monospace" font-weight="bold" >/</text>
+      </svg>
+    </div>
+    <!-- Contenido principal -->
+    <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-left text-[var(--color-text)]">
+        About<span class="text-[var(--color-accent)]">.</span>
+      </h2>
+      <p class="mb-4 text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl">
+        <span class="font-semibold text-[var(--color-text)]">Web Developer</span> en transición hacia una carrera en tecnología.<br/>
+        Actualmente, mi enfoque está en aprender y dominar habilidades esenciales de desarrollo web. Tengo una base sólida en <span class="font-semibold text-[var(--color-accent)]">HTML, CSS, Git y JavaScript</span>.
       </p>
-      <p class="mb-6 text-lg text-[var(--color-text)]">
-        With a strong foundation in both frontend and backend development, I
-        create seamless experiences that are both beautiful and functional.
+      <p class="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl">
+        Me apasiona crear soluciones digitales modernas y atractivas, siempre buscando mejorar y aprender nuevas tecnologías.
       </p>
-      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <SkillCard title="Frontend" skills="React, Vue, Astro" />
-        <SkillCard title="Backend" skills="Node.js, Express, Django" />
-        <SkillCard title="Database" skills="MongoDB, PostgreSQL" />
-        <SkillCard title="DevOps" skills="Docker, CI/CD, AWS" />
-      </div>
     </div>
   </div>
 </section>
