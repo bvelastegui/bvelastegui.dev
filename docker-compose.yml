@@ -1,0 +1,15 @@
+services:
+  traefik:
+    image: traefik:v3.1
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  web:
+    image: ghcr.io/bvelastegui/bvelastegui.dev:${GIT_COMMIT_HASH:-latest}
+    labels:
+      - "traefik.http.routers.bvelastegui.rule=Host(`bvelastegui.test`)"
