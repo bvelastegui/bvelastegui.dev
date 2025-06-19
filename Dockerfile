@@ -1,5 +1,7 @@
 FROM node:lts-slim AS base
 
+LABEL org.opencontainers.image.source=https://github.com/bvelastegui/bvelastegui.dev
+
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
