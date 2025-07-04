@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/node": "^9.2.2",
+    "@astrojs/partytown": "^2.1.4",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.2",
