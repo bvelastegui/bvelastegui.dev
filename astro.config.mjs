@@ -4,18 +4,23 @@ import tailwindcss from "@tailwindcss/vite";
 import partytown from "@astrojs/partytown";
 
 // Environment-based configuration for different deployment targets
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-// GitHub Pages configuration
+// Check if we have a CNAME file (indicates custom domain usage)
+import { readFileSync, existsSync } from 'fs';
+const hasCNAME = existsSync('./public/CNAME');
+const customDomain = hasCNAME ? readFileSync('./public/CNAME', 'utf-8').trim() : null;
+
+// GitHub Pages with subdirectory (no custom domain)
 const gitHubPagesConfig = {
   site: 'https://bvelastegui.github.io',
   base: '/bvelastegui.dev',
 };
 
-// Custom domain configuration (for production)
+// Custom domain configuration (GitHub Pages with CNAME)
 const customDomainConfig = {
-  site: 'https://bvelastegui.dev',
+  site: customDomain ? `https://${customDomain}` : 'https://bvelastegui.dev',
   base: '/',
 };
 
@@ -30,9 +35,15 @@ const getDeploymentConfig = () => {
   if (isDevelopment) {
     return developmentConfig;
   }
-  if (isGitHubPages) {
+  if (isGitHubActions && hasCNAME) {
+    // GitHub Actions build with custom domain
+    return customDomainConfig;
+  }
+  if (isGitHubActions) {
+    // GitHub Actions build without custom domain
     return gitHubPagesConfig;
   }
+  // Fallback to custom domain config for production
   return customDomainConfig;
 };
 
