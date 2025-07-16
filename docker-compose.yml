@@ -10,6 +10,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   web:
+    # Static site served by nginx
     image: ghcr.io/bvelastegui/bvelastegui.dev:${GIT_COMMIT_HASH:-latest}
     labels:
       - "traefik.http.routers.bvelastegui.rule=Host(`bvelastegui.test`)"
