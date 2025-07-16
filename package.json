@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:github-pages": "GITHUB_ACTIONS=true astro build",
     "preview": "astro preview",
+    "preview:github-pages": "GITHUB_ACTIONS=true astro preview",
     "astro": "astro"
   },
   "dependencies": {
