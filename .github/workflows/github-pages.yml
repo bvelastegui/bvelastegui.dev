@@ -57,6 +57,9 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          # Enable Pages if not already enabled
+          enablement: true
         
       - name: Build with Astro
         run: pnpm run build:github-pages
