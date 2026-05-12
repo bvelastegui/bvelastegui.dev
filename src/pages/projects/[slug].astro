@@ -1,19 +1,19 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
 // Generate static paths for all projects
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.id },
     props: { project },
   }));
 }
 
 // Get the project data from the collection
 const { project } = Astro.props;
-const { Content } = await project.render();
+const { Content } = await render(project);
 
 // Extract project data
 const { title, description, image, technologies, demoUrl, repoUrl, publishDate } = project.data;

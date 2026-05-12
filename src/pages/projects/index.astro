@@ -26,7 +26,7 @@ const sortedProjects = projects.sort((a, b) =>
       {sortedProjects.map((project) => (
         <ProjectCard 
           project={project}
-          slug={project.slug}
+          slug={project.id}
           title={project.data.title}
           description={project.data.description}
           image={project.data.image}
