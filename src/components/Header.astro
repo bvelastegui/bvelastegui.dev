@@ -17,6 +17,12 @@
         Experience
       </a>
       <a
+        href="/#projects"
+        class="transition-colors duration-300 text-white hover:text-accent px-4 py-1 border-b-2 border-transparent hover:border-accent"
+      >
+        Projects
+      </a>
+      <a
         href="/#contact"
         class="transition-colors duration-300 text-white hover:text-accent px-4 py-1 border-b-2 border-transparent hover:border-accent"
       >
@@ -28,8 +34,8 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll("header nav a");
-    const sections = document.querySelectorAll("main section");
+    const navLinks: NodeListOf<HTMLLinkElement> = document.querySelectorAll("header nav a");
+    const sections: NodeListOf<HTMLElement> = document.querySelectorAll("main section");
 
     window.onscroll = () => {
       sections.forEach((section) => {
@@ -42,7 +48,7 @@
           navLinks.forEach((link) => {
             link.classList.remove("border-accent");
             link.classList.add("border-transparent");
-            let activeElement = document.querySelector(
+            let activeElement: HTMLElement|null = document.querySelector(
               `header nav a[href*="/#${id}"]`,
             );
             if (activeElement) {

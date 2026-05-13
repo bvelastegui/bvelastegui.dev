@@ -15,32 +15,32 @@ const { slug, title, description, image, technologies } = Astro.props;
 ---
 
 <div
-  class="overflow-hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-background-alt)] shadow-sm transition-shadow hover:shadow-md"
+  class="group overflow-hidden relative rounded-lg border border-(--color-border) bg-(--color-background-alt) shadow-sm transition-shadow hover:shadow-md"
 >
-  <div
-    class="flex h-48 items-center justify-center bg-[var(--color-primary-light)]"
-  >
-    {image ? (
-      <img 
-        src={image} 
-        alt={title} 
-        class="h-full w-full object-cover"
-      />
-    ) : (
-      <span class="text-xl text-white">Project Image</span>
-    )}
-  </div>
-  <div class="p-6">
-    <h3 class="mb-2 text-xl font-bold text-[var(--color-primary)]">
+  <div class="flex flex-col h-full">
+    <div
+        class="flex mb-6 h-48 items-center justify-center bg-(--color-primary-light)"
+    >
+      {image ? (
+          <img
+              src={image}
+              alt={title}
+              class="h-full w-full object-cover grayscale group-hover:grayscale-0 group-hover:duration-150"
+          />
+      ) : (
+          <span class="bg-linear-to-br from-accent-blue to-accent h-full w-full grayscale group-hover:grayscale-0 group-hover:duration-150"></span>
+      )}
+    </div>
+    <h3 class="px-6 mb-2 text-xl font-bold text-primary">
       {title}
     </h3>
-    <p class="mb-4 text-[var(--color-text-muted)]">
+    <p class="px-6 mb-4 text-muted">
       {description}
     </p>
-    <div class="mb-4 flex flex-wrap gap-2">
+    <div class="mt-auto px-6 mb-4 flex flex-wrap gap-2">
       {
         technologies.map((tech) => (
-          <span class="rounded-full bg-[var(--color-secondary-light)] px-2 py-1 text-xs text-[var(--color-primary-dark)]">
+          <span class="rounded-full bg-black/30 px-2 py-1 text-xs text-accent-blue">
             {tech}
           </span>
         ))
@@ -48,8 +48,9 @@ const { slug, title, description, image, technologies } = Astro.props;
     </div>
     <a
       href={`/projects/${slug}`}
-      class="font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"
-      >View Project →</a
+      class="mt-auto px-6 pt-6 mb-6 font-medium text-primary hover:text-(--color-primary-dark)"
     >
+      View Project →
+    </a>
   </div>
 </div>
