@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.7",
+    "@astrojs/sitemap": "^3.7.2",
+    "@fontsource/ubuntu-mono": "^5.2.8",
+    "@fontsource/ubuntu-sans": "^5.2.10",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.1",

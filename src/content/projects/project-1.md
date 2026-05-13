@@ -8,10 +8,6 @@ featured: true
 publishDate: 2024-07-01
 ---
 
-# Plataforma Fiestas Infantiles
-
-Aplicación web a medida desarrollada para Candy's Party, que permite la reserva de servicios de entretenimiento infantil con un panel administrativo completo.
-
 ## Características
 
 - Panel administrativo para gestión de servicios, paquetes y reservas

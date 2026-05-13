@@ -9,10 +9,6 @@ featured: true
 publishDate: 2024-01-01
 ---
 
-# CineTeca
-
-Proyecto académico: aplicación web para gestión y descubrimiento de películas construida con Vanilla JS, consumiendo la API pública de TMDB.
-
 ## Características
 
 - Arquitectura ETL para procesamiento de datos de películas

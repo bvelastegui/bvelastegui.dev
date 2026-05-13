@@ -6,10 +6,6 @@ featured: true
 publishDate: 2023-06-01
 ---
 
-# Sistema de Identidad Federada
-
-Implementación de un servidor de autorización OAuth2 personalizado para habilitar inicio de sesión único (SSO) entre los múltiples servicios del ecosistema de Polimundo.
-
 ## Características
 
 - Soporte para flujos Authorization Code y Client Credentials

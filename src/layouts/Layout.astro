@@ -1,24 +1,47 @@
 ---
 import "../../src/styles/global.css";
+import "@fontsource/ubuntu-sans/400.css";
+import "@fontsource/ubuntu-sans/500.css";
+import "@fontsource/ubuntu-sans/600.css";
+import "@fontsource/ubuntu-sans/700.css";
+import "@fontsource/ubuntu-sans/800.css";
+import "@fontsource/ubuntu-mono/700.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Bryan Velastegui",
+  description = "Ingeniero de Software Senior con más de 7 años de experiencia construyendo sistemas web escalables. Especializado en PHP/Laravel, Vue.js y Docker.",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="generator" content={Astro.generator} />
-    <meta name="title" content="Bryan Velastegui" />
-    <meta name="description" content="Desarrollador full-stack con mas de nueve años de experiencia en el desarrollo y soporte de sistemas web" />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
     <meta name="keywords" content="full-stack, programming, developer, freelancer, laravel, vuejs, php, docker, git" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet" />
-    <title>Bryan Velastegui</title>
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <title>{title}</title>
     <!-- Google tag (gtag.js) -->
     <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-V8KHXCLXZJ" />
     <script type="text/partytown">

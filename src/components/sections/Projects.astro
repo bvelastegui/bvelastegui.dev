@@ -15,12 +15,11 @@ const sortedProjects = projects.sort((a, b) =>
 
 <section id="projects" class="py-20 px-4 md:px-12">
   <div class="max-w-4xl mx-auto px-4 py-8">
-    <SectionHeader title="Projects" />
+    <SectionHeader title="Proyectos" />
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {sortedProjects.map((project) => (
           <ProjectCard
-              project={project}
               slug={project.id}
               title={project.data.title}
               description={project.data.description}

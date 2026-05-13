@@ -19,7 +19,7 @@ const { Content } = await render(project);
 const { title, description, image, technologies, demoUrl, repoUrl, publishDate } = project.data;
 
 // Format the date
-const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
+const formattedDate = new Date(publishDate).toLocaleDateString("es-EC", {
   year: "numeric",
   month: "long",
   day: "numeric",
@@ -27,17 +27,20 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
 ---
 
 <Layout>
-  <div class="container mx-auto px-4 py-8">
+  <div class="max-w-4xl mx-auto px-4 py-8">
     <div class="mb-8">
-      <a href="/#projects" class="text-primary hover:text-(--color-primary-dark)">
-        ← Back to Projects
+      <a href="/#projects" class="text-primary hover:text-(--color-primary-dark) flex gap-2 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+          <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+        </svg>
+        Volver
       </a>
     </div>
 
     <article class="prose prose-lg dark:prose-invert max-w-none">
       {image && (
-        <div class="mb-8 overflow-hidden h-162.5 rounded-lg border-[0.1rem] border-accent/20">
-          <img src={image} alt={title} class="h-full w-full object-cover object-top mt-0" />
+        <div class="mb-8 overflow-hidden h-162.5 border-2 border-accent-blue">
+          <img src={image} alt={title} class="h-full w-full object-cover object-top-left mt-0" />
         </div>
       )}
 
@@ -45,13 +48,13 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
         <h1 class="text-4xl font-bold text-primary">{title}</h1>
         <p class="text-lg text-(--color-text-muted)">{description}</p>
         <div class="mt-4">
-          <span class="text-sm text-(--color-text-muted)">Published on {formattedDate}</span>
+          <span class="text-sm text-(--color-text-muted)">Publicado el {formattedDate}</span>
         </div>
       </header>
 
       <div class="mb-8 flex flex-wrap gap-2">
         {technologies.map((tech) => (
-          <span class="rounded-full bg-black/30 px-3 py-1 text-sm text-(--color-primary-dark)">
+          <span class="rounded bg-black/30 px-3 py-1 text-sm text-(--color-primary-dark)">
             {tech}
           </span>
         ))}
@@ -63,9 +66,9 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
             href={demoUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center rounded-md border no-underline hover:text-white px-4 py-2 text-accent hover:bg-(--color-primary-dark)"
+            class="inline-flex no-underline items-center border border-accent-blue px-4 py-2 text-accent-blue hover:text-accent"
           >
-            View Demo
+            Ver en vivo
           </a>
         )}
         {repoUrl && (
@@ -73,9 +76,9 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
             href={repoUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex no-underline items-center rounded-md border border-primary px-4 py-2 text-primary hover:bg-(--color-primary-light) hover:text-white"
+            class="inline-flex no-underline items-center border border-accent-blue px-4 py-2 text-accent-blue hover:text-accent"
           >
-            View Code
+            Ver código
           </a>
         )}
       </div>

@@ -1,7 +1,8 @@
 // @ts-check
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import partytown from "@astrojs/partytown";
+import sitemap from "@astrojs/sitemap";
 
 // Environment-based configuration for different deployment targets
 const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
@@ -59,15 +60,12 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  image: {
-    service: passthroughImageService(),
-  },
-
   integrations: [
     partytown({
       config: {
         forward: ["dataLayer.push"],
       },
     }),
+    sitemap(),
   ],
 });

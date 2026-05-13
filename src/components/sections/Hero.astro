@@ -13,10 +13,10 @@ import ownerImage from '../../assets/me.jpg'
   class="container mx-auto flex flex-col md:flex-row items-center justify-center py-16 md:pt-24 md:pb-36 px-4 md:px-12"
 >
   <div
-    class="relative flex-shrink-0 flex items-center justify-center w-40 h-56 md:w-56 md:h-72 border-2 border-accent-blue mb-8 md:mb-0">
+    class="relative shrink-0 flex items-center justify-center w-40 h-56 md:w-56 md:h-72 border-2 border-accent-blue mb-8 md:mb-0">
     <div class="absolute -right-2 -bottom-6 p-2 bg-secondary size-16"></div>
     <div
-      class="text-6xl bg-gradient-to-r text-shadow-accent-blue from-accent to-accent-blue bg-clip-text text-transparent font-black font-mono absolute z-20 -right-8 -bottom-7 tracking-tighter">
+      class="text-6xl bg-linear-to-r text-shadow-accent-blue from-accent to-accent-blue bg-clip-text text-transparent font-black font-mono absolute z-20 -right-8 -bottom-7 tracking-tighter">
       {"</>"}
     </div>
 
@@ -30,15 +30,17 @@ import ownerImage from '../../assets/me.jpg'
   <!-- Contenido principal -->
   <div class="flex flex-col items-center md:items-start text-center md:text-left md:ml-30">
     <h1 class="mb-4 text-5xl md:text-6xl font-bold text-white leading-snug">
-      Hi, I'm Bryan<span class="text-accent">.</span><br />
-      <span class="bg-gradient-to-r  from-muted to-muted/30 bg-clip-text text-transparent">FullStack Dev</span>
+      Hola, soy Bryan<span class="text-accent">.</span><br />
+      <span class="bg-linear-to-r from-muted to-muted/30 bg-clip-text text-transparent">FullStack Dev</span>
     </h1>
-    <div class="flex gap-4 mb-6">
-      <Image loading="eager" src={phpImage} alt="PHP" class="size-7" />
-      <Image loading="eager" src={nodeImage} alt="NodeJS" class="size-7" />
-      <Image loading="eager" src={psqlImage} alt="PostgreSQL" class="size-7" />
-      <Image loading="eager" src={gitImage} alt="Git" class="size-7" />
-      <Image loading="eager" src={archImage} alt="Arch Linux" class="size-7" />
-    </div>
+    <p class="text-muted text-sm mb-6 max-w-sm">
+      Más de 7 años construyendo sistemas web escalables. Especializado en PHP/Laravel, Vue.js y Docker.
+    </p>
+    <a
+      href="#contact"
+      class="border border-accent text-accent px-4 py-2 text-sm font-semibold hover:bg-accent hover:text-secondary transition-colors"
+    >
+      Contáctame
+    </a>
   </div>
 </section>

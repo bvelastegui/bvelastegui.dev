@@ -8,10 +8,6 @@ featured: true
 publishDate: 2025-05-12
 ---
 
-# Portfolio Personal
-
-Sitio web personal desarrollado con Astro 6 como generador de sitios estáticos y Tailwind CSS v4 para los estilos.
-
 ## Características
 
 - Generación estática (SSG) con Astro 6

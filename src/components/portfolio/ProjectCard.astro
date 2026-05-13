@@ -1,9 +1,7 @@
 ---
 // ProjectCard.astro - Reusable project card component
-import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  project?: CollectionEntry<"projects">;
   slug: string;
   title: string;
   description: string;
@@ -15,7 +13,7 @@ const { slug, title, description, image, technologies } = Astro.props;
 ---
 
 <div
-  class="overflow-hidden relative rounded-lg border border-(--color-border) bg-(--color-background-alt) shadow-sm transition-shadow hover:shadow-md"
+  class="overflow-hidden relative border-2 border-accent-blue bg-(--color-background-alt) shadow-sm transition-shadow hover:shadow-md"
 >
   <div class="flex flex-col h-full">
     <div
@@ -31,7 +29,7 @@ const { slug, title, description, image, technologies } = Astro.props;
           <span class="bg-linear-to-br from-accent-blue to-accent h-full w-full grayscale group-hover:grayscale-0 group-hover:duration-150"></span>
       )}
     </div>
-    <h3 class="px-6 mb-2 text-xl font-bold text-primary">
+    <h3 class="px-6 mb-2 text-xl font-bold text-white">
       {title}
     </h3>
     <p class="px-6 mb-4 text-muted">
@@ -40,7 +38,7 @@ const { slug, title, description, image, technologies } = Astro.props;
     <div class="mt-auto px-6 mb-4 flex flex-wrap gap-2">
       {
         technologies.map((tech) => (
-          <span class="rounded-full bg-black/30 px-2 py-1 text-xs text-accent-blue">
+          <span class="bg-black/30 px-2 py-1 text-xs text-white">
             {tech}
           </span>
         ))
@@ -48,9 +46,12 @@ const { slug, title, description, image, technologies } = Astro.props;
     </div>
     <a
       href={`/projects/${slug}`}
-      class="mt-auto px-6 pt-6 mb-6 font-medium text-primary hover:text-(--color-primary-dark)"
+      class="mt-auto px-6 pt-6 mb-6 font-medium text-accent hover:text-white flex gap-1 items-center"
     >
-      View Project →
+      Ver Proyecto
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+        <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+      </svg>
     </a>
   </div>
 </div>
