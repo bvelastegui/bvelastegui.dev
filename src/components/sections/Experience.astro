@@ -12,7 +12,7 @@ const experiences = await getCollection('experiences');
     <div class="flex flex-col divide-y divide-alt">
       {experiences.map((experience) => (
         <div class="z-10 flex flex-col md:flex-row md:items-start gap-4 py-8 first:pt-0 last:pb-0">
-          <div class="md:w-48 flex-shrink-0 mb-2 md:mb-0">
+          <div class="md:w-48 shrink-0 mb-2 md:mb-0">
             <span class="block text-sm font-semibold text-accent">
               {experience.data.startDate} - {experience.data.endDate}
             </span>

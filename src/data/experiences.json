@@ -1,34 +1,42 @@
 [
   {
-    "id": 4,
+    "id": 5,
     "startDate": "Apr 2022",
     "endDate": "Actual",
     "company": "Polimundo",
-    "position": "Full Stack Developer",
-    "description": "Desarrollo y soporte de sistemas web."
+    "position": "Ingeniero de Software Senior",
+    "description": "Desarrollo y mantenimiento de plataforma de reservas turísticas con arquitectura basada en contenedores Docker.\nIntegraciones críticas con APIs externas: Hotelbeds, Amadeus (SOAP), LATAM NDC, Copa NDC.\nDiseño e implementación de sistema de identidad federada con OAuth2 (Laravel Passport) habilitando SSO entre múltiples servicios.\nOptimización de consultas Eloquent e implementación de caché con Redis.\nParticipación en revisiones de código, estándares de desarrollo y mejora continua de pipelines CI/CD."
+  },
+  {
+    "id": 4,
+    "startDate": "May 2021",
+    "endDate": "Actual",
+    "company": "Proyectos Independientes",
+    "position": "Desarrollador Freelance",
+    "description": "Plataforma Fiestas Infantiles (May–Jul 2024): aplicación web a medida con Laravel, Alpine.js y TailwindCSS para reserva de servicios de entretenimiento infantil, con panel administrativo completo y optimización SEO.\nIntegración API Logística Internacional (May–Ago 2021): middleware Laravel para integrar sistemas de importación con plataformas logísticas chinas (LAAR Cargo) para CREATE CREAVIRT CIA LTDA."
   },
   {
     "id": 3,
     "startDate": "Ago 2021",
     "endDate": "Apr 2022",
-    "company": "Intisana",
-    "position": "Jefe de sistemas",
-    "description": "Seguridad perimetral con Fortigate.\nAdministración de redes inalámbricas.\nAdministración G-Suite.\nAdministración ESET PROTECT.\nAdministración WHM CPANEL."
+    "company": "Colegio Intisana",
+    "position": "Jefe de Departamento de Sistemas",
+    "description": "Liderazgo del área de TI: administración de infraestructura LAN/WLAN, seguridad perimetral con Fortigate y gestión de más de 500 cuentas G-Suite.\nDesarrollo activo de nuevas funcionalidades para el sistema de gestión académica.\nImplementación de políticas de respaldo, monitoreo de infraestructura y documentación operativa."
   },
   {
     "id": 2,
     "startDate": "Nov 2015",
     "endDate": "Apr 2022",
-    "company": "Intisana",
-    "position": "Desarrollador Web",
-    "description": "Desarrollo de aplicaciones web con PHP, MySQL y JavaScript.\nMantenimiento y actualización del sistema de gestión académica."
+    "company": "Colegio Intisana",
+    "position": "Desarrollador de Software",
+    "description": "Mantenimiento y evolución del sistema de gestión académica (calificaciones, horarios, reportes, usuarios).\nDesarrollo desde cero: sistema de asistencia, motor de citas padre-docente, gestión médica y plataforma de admisiones online.\nIntegración de pasarela de pagos Placetopay para módulos de matrículas y pensiones (webhooks, conciliación, PCI).\nRefactorización de código legacy a arquitectura MVC con Laravel."
   },
   {
     "id": 1,
     "startDate": "Nov 2012",
-    "endDate": "May 2015",
-    "company": "Intisana",
-    "position": "Asistente de sistemas",
-    "description": "Mantenimiento preventivo y correctivo.\nMantenimiento y soporte del Sistema de Educación Online.\nAsistencia técnica al personal de la institución."
+    "endDate": "Nov 2015",
+    "company": "Colegio Intisana",
+    "position": "Técnico de Soporte IT",
+    "description": "Mantenimiento preventivo y correctivo de más de 150 dispositivos.\nSoporte a usuarios finales: resolución de incidencias de software y conectividad.\nInstalación y configuración de sistemas operativos, suites ofimáticas y herramientas educativas."
   }
 ]
