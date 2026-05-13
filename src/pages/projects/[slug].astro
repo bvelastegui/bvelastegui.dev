@@ -29,29 +29,29 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
 <Layout>
   <div class="container mx-auto px-4 py-8">
     <div class="mb-8">
-      <a href="/#projects" class="text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]">
+      <a href="/#projects" class="text-primary hover:text-(--color-primary-dark)">
         ← Back to Projects
       </a>
     </div>
 
     <article class="prose prose-lg dark:prose-invert max-w-none">
       {image && (
-        <div class="mb-8 overflow-hidden rounded-lg">
-          <img src={image} alt={title} class="w-full h-auto" />
+        <div class="mb-8 overflow-hidden h-162.5 rounded-lg border-[0.1rem] border-accent/20">
+          <img src={image} alt={title} class="h-full w-full object-cover object-top mt-0" />
         </div>
       )}
 
       <header class="mb-8">
-        <h1 class="text-4xl font-bold text-[var(--color-primary)]">{title}</h1>
-        <p class="text-lg text-[var(--color-text-muted)]">{description}</p>
+        <h1 class="text-4xl font-bold text-primary">{title}</h1>
+        <p class="text-lg text-(--color-text-muted)">{description}</p>
         <div class="mt-4">
-          <span class="text-sm text-[var(--color-text-muted)]">Published on {formattedDate}</span>
+          <span class="text-sm text-(--color-text-muted)">Published on {formattedDate}</span>
         </div>
       </header>
 
       <div class="mb-8 flex flex-wrap gap-2">
         {technologies.map((tech) => (
-          <span class="rounded-full bg-[var(--color-secondary-light)] px-3 py-1 text-sm text-[var(--color-primary-dark)]">
+          <span class="rounded-full bg-black/30 px-3 py-1 text-sm text-(--color-primary-dark)">
             {tech}
           </span>
         ))}
@@ -63,7 +63,7 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
             href={demoUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center rounded-md bg-[var(--color-primary)] px-4 py-2 text-white hover:bg-[var(--color-primary-dark)]"
+            class="inline-flex items-center rounded-md border no-underline hover:text-white px-4 py-2 text-accent hover:bg-(--color-primary-dark)"
           >
             View Demo
           </a>
@@ -73,7 +73,7 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", {
             href={repoUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center rounded-md border border-[var(--color-primary)] px-4 py-2 text-[var(--color-primary)] hover:bg-[var(--color-primary-light)] hover:text-white"
+            class="inline-flex no-underline items-center rounded-md border border-primary px-4 py-2 text-primary hover:bg-(--color-primary-light) hover:text-white"
           >
             View Code
           </a>
