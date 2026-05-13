@@ -15,7 +15,7 @@ const { slug, title, description, image, technologies } = Astro.props;
 ---
 
 <div
-  class="group overflow-hidden relative rounded-lg border border-(--color-border) bg-(--color-background-alt) shadow-sm transition-shadow hover:shadow-md"
+  class="overflow-hidden relative rounded-lg border border-(--color-border) bg-(--color-background-alt) shadow-sm transition-shadow hover:shadow-md"
 >
   <div class="flex flex-col h-full">
     <div
@@ -25,7 +25,7 @@ const { slug, title, description, image, technologies } = Astro.props;
           <img
               src={image}
               alt={title}
-              class="h-full w-full object-cover grayscale group-hover:grayscale-0 group-hover:duration-150"
+              class="h-full w-full object-cover"
           />
       ) : (
           <span class="bg-linear-to-br from-accent-blue to-accent h-full w-full grayscale group-hover:grayscale-0 group-hover:duration-150"></span>

@@ -1,31 +1,28 @@
 ---
-title: "Task Management App"
-description: "A productivity app for managing tasks, projects, and deadlines with team collaboration features."
-image: "/images/projects/taskapp.jpg"
-technologies: ["Vue.js", "Firebase", "Tailwind CSS"]
-demoUrl: "https://task-manager-example.com"
-repoUrl: "https://github.com/example/task-manager"
-featured: false
-publishDate: 2023-11-05
+title: "CineTeca"
+description: "Aplicación web para gestión y descubrimiento de películas con arquitectura ETL, caché con TTL y capacidades PWA, consumiendo la API de TMDB."
+technologies: ["JavaScript", "TMDB API", "GitHub Actions", "PWA"]
+demoUrl: "https://cineteca.bvelastegui.dev"
+repoUrl: "https://github.com/bvelastegui/cineteca"
+image: "/images/projects/cineteca.png"
+featured: true
+publishDate: 2024-01-01
 ---
 
-# Task Management App
+# CineTeca
 
-A comprehensive task management application built with Vue.js and Firebase. This app helps users organize their tasks, track progress, and collaborate with team members.
+Proyecto académico: aplicación web para gestión y descubrimiento de películas construida con Vanilla JS, consumiendo la API pública de TMDB.
 
-## Features
+## Características
 
-- Task creation and management
-- Project organization
-- Due date tracking and reminders
-- Team collaboration
-- Real-time updates
-- Responsive design for mobile and desktop
+- Arquitectura ETL para procesamiento de datos de películas
+- Caché con TTL para optimizar llamadas a la API
+- Capacidades PWA para acceso offline
+- Deploy automatizado con GitHub Actions
 
-## Technologies Used
+## Tecnologías
 
-- Vue.js for the frontend framework
-- Firebase for backend services (Authentication, Firestore, Storage)
-- Tailwind CSS for styling
-- Vite for build tooling
-- PWA capabilities for offline access
+- Vanilla JavaScript (ES6+)
+- TMDB API como fuente de datos
+- GitHub Actions para CI/CD
+- Service Workers para PWA

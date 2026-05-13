@@ -1,31 +1,24 @@
 ---
-title: "E-commerce Platform"
-description: "A full-featured e-commerce platform with product catalog, shopping cart, and payment processing."
-image: "/images/projects/ecommerce.jpg"
-technologies: ["React", "Node.js", "MongoDB", "Express"]
-demoUrl: "https://example-shop.com"
-repoUrl: "https://github.com/example/ecommerce"
+title: "Sistema de Identidad Federada"
+description: "Servidor de autorización OAuth2 con Laravel Passport que habilita Single Sign-On entre múltiples microservicios del ecosistema Polimundo."
+technologies: ["Laravel", "OAuth2", "Laravel Passport", "Docker"]
 featured: true
-publishDate: 2023-10-20
+publishDate: 2023-06-01
 ---
 
-# E-commerce Platform
+# Sistema de Identidad Federada
 
-A comprehensive e-commerce solution built with the MERN stack (MongoDB, Express, React, Node.js). This platform includes product management, user authentication, shopping cart functionality, and payment processing.
+Implementación de un servidor de autorización OAuth2 personalizado para habilitar inicio de sesión único (SSO) entre los múltiples servicios del ecosistema de Polimundo.
 
-## Features
+## Características
 
-- User authentication and profiles
-- Product catalog with categories and filters
-- Shopping cart and checkout process
-- Payment processing integration
-- Order history and tracking
-- Admin dashboard for product management
+- Soporte para flujos Authorization Code y Client Credentials
+- Gestión granular de scopes y roles
+- Integración con múltiples microservicios
+- Sesiones seguras y revocación de tokens
 
-## Technologies Used
+## Tecnologías
 
-- React for the frontend
-- Node.js and Express for the backend
-- MongoDB for the database
-- JWT for authentication
-- Stripe for payment processing
+- Laravel Passport como servidor OAuth2
+- Docker para containerización
+- MySQL para persistencia de tokens y clientes

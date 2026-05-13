@@ -1,29 +1,29 @@
 ---
-title: "Portfolio Website"
-description: "A personal portfolio website built with Astro and Tailwind CSS to showcase my projects and skills."
-image: "/images/projects/portfolio.jpg"
-technologies: ["Astro", "Tailwind CSS", "JavaScript"]
-demoUrl: "https://example.com"
-repoUrl: "https://github.com/example/portfolio"
+title: "Plataforma Fiestas Infantiles"
+description: "Aplicación web a medida para reserva de servicios de entretenimiento infantil con panel administrativo completo, gestión de paquetes, reservas y testimonios."
+image: "/images/projects/fiestas-infantiles.png"
+technologies: ["Laravel", "Alpine.js", "TailwindCSS", "MySQL"]
+demoUrl: "https://fiestas-infantiles.party"
 featured: true
-publishDate: 2023-09-15
+publishDate: 2024-07-01
 ---
 
-# Portfolio Website
+# Plataforma Fiestas Infantiles
 
-This is my personal portfolio website built with Astro and Tailwind CSS. It features a responsive design, dark mode support, and showcases my projects and skills.
+Aplicación web a medida desarrollada para Candy's Party, que permite la reserva de servicios de entretenimiento infantil con un panel administrativo completo.
 
-## Features
+## Características
 
-- Responsive design
-- Dark mode support
-- Fast loading times
-- SEO optimized
-- Contact form
+- Panel administrativo para gestión de servicios, paquetes y reservas
+- Gestión de testimonios de clientes
+- Interfaz responsive con TailwindCSS
+- Interactividad ligera con Alpine.js
+- Protección CSRF y gestión segura de sesiones
+- Optimización técnica para SEO y tiempos de carga
 
-## Technologies Used
+## Tecnologías
 
-- Astro for static site generation
-- Tailwind CSS for styling
-- JavaScript for interactivity
-- Markdown for content
+- Laravel con arquitectura MVC
+- Alpine.js para interactividad del lado cliente
+- TailwindCSS para estilos responsive
+- MySQL como base de datos
